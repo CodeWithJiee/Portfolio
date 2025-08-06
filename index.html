@@ -7,17 +7,6 @@
     <title>My Profile</title>
 
     <style>
-        /* Hide all sections except .mainContent on mobile, show when scrolling */
-        @media (max-width: 800px) {
-            .personalInfo, .contactInfo, .educationInfo {
-                display: none;
-            }
-            body.scrolled .personalInfo,
-            body.scrolled .contactInfo,
-            body.scrolled .educationInfo {
-                display: grid;
-            }
-        }
         body {
             margin: 0;
             padding: 0;
@@ -326,25 +315,32 @@
         <source src="ownBg.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-    <nav class="navbar">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#personalInfo">About</a></li>
-            <li><a href="#contactInfo">Contact</a></li>
-        </ul>
-    </nav>
+   <nav class="navbar">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#personalInfo">About</a></li>
+        <li><a href="#contactInfo">Contact</a></li>
+
+    </ul>
+</nav>
     <div class="mainContent" id="mainContent">
-        <div class="mainText">
-            <h1>Hi, I'm Kenjie De Guzman Software Developer in the making.</h1>
-            <div class="subText">
-                <p>BSIT Student and Passionate About Building Apps That Solve Real Problems</p>
-            </div>
-            <div class="moreInfo">
-                <a href="#personalInfo" class="arrow"> MORE ABOUT ME</a>
-            </div>
-        </div>
-    </div>
-    <div id="personalInfo" class="personalInfo">
+            
+            <div class="mainText">
+                <h1>Hi, I'm Kenjie De Guzman Software Developer in the making.</h1>           
+            
+            <!-- another div so that i can set a fixed with to the <p> to indent it -->
+                <div class="subText">
+                     <p>BSIT Student and Passionate About Building Apps That Solve Real Problems</p>
+                </div>
+            
+            <!-- div for my hyperlink -->
+                <div class="moreInfo">
+                    <a href="#personalInfo" class="arrow"> MORE ABOUT ME</a>
+                </div>
+            </div>         
+     </div>
+
+     <div id="personalInfo" class="personalInfo">
         <img src="portraitBg.png" alt="image">
         <div class="infoDetails">
             <h1>PERSONAL INFORMATION</h1>
@@ -352,51 +348,43 @@
             <h2>Birtdate: March 12, 2005</h2>
             <h2>Age: 20 years old</h2>
             <h2>Birth of Place: Magumbali, Candaba, Pampanga</h2>
+            <h2>Hobbies: Online Games, Listening to Music, Cooking, Eating and Singing</h2>
+
         </div>
-    </div>
-    <div id="contactInfo" class="contactInfo">
-        <video autoplay muted loop playsinline id="contactLogo" poster="staticLogo.png">
-            <source src="contactLogo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+     </div>   
+
+      <div id="contactInfo" class="contactInfo">
+        <!-- <img src="portraitBg.png" alt="image"> -->
+         <video autoplay muted loop playsinline id="contactLogo" poster="staticLogo.png">
+        <source src="contactLogo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
         <div class="contactDetails">
             <h1 style="margin-bottom: 20px;">CONTACT INFORMATION</h1>
             <h2>Phone: 0915-032-1670</h2>
-            <h2>G-Mail: kenjie.deguzman.bsit@gmail.com</h2>
-            <h2><a href="https://github.com/CodeWithJiee" style="text-decoration: none; color: white;">Github: github.com/CodeWithJiee</a></h2>
-            <h2><a href="https://www.linkedin.com/in/kenjie-deguzman-bsit/" style="text-decoration: none; color: white;">LinkedIn: linkedin.com/in/kenjie-deguzman-bsit/</a></h2>
+            <h2>G-Mail: kenjie.deguzman.bsit@gmail.com</a></h2>
+            <h2> <a href="https://github.com/CodeWithJiee" style="text-decoration: none; color: white;">Github: github.com/CodeWithJiee</a></h2>
+            <h2> <a href="https://www.linkedin.com/in/kenjie-deguzman-bsit/" style="text-decoration: none; color: white;">LinkedIn: linkedin.com/in/kenjie-deguzman-bsit/</a></h2>
+          
+
         </div>
-    </div>
+     </div>   
+
     <div id="educationInfo" class="educationInfo">
-        <h1 style="color: white; text-align: center; font-family: 'Orbitron', serif; margin-bottom: 32px; width: 100%; grid-column: 1 / -1;">EDUCATIONAL BACKGROUND</h1>
-        <div class="educationCard">
-            <img src="elemLogo.png" alt="Elementary Logo">
-            <div class="year">Magumbali Elementary School<br>2010-2017</div>
-        </div>
-        <div class="educationCard">
-            <img src="highschool-logo.png" alt="High School Logo">
-            <div class="year">Salapungan National High School<br>2017-2023</div>
-        </div>
-        <div class="educationCard">
-            <img src="college-logo.png" alt="College Logo">
-            <div class="year">Bulacan State University<br>2023-Present</div>
-        </div>
+      <h1 style="color: white; text-align: center; font-family: 'Orbitron', serif; margin-bottom: 32px; width: 100%; grid-column: 1 / -1;">EDUCATIONAL BACKGROUND</h1>
+      <div class="educationCard">
+          <img src="elemLogo.png" alt="Elementary Logo">
+          <div class="year">Magumbali Elementary School<br>2010-2017</div>
+      </div>
+      <div class="educationCard">
+          <img src="highschool-logo.png" alt="High School Logo">
+          <div class="year">Salapungan National High School<br>2017-2023</div>
+      </div>
+      <div class="educationCard">
+          <img src="college-logo.png" alt="College Logo">
+          <div class="year">Bulacan State University<br>2023-Present</div>
+      </div>
     </div>
-    <script>
-        // On mobile, show only mainContent until user scrolls
-        function handleScroll() {
-            if(window.innerWidth <= 800) {
-                if(window.scrollY > 50) {
-                    document.body.classList.add('scrolled');
-                } else {
-                    document.body.classList.remove('scrolled');
-                }
-            }
-        }
-        window.addEventListener('scroll', handleScroll);
-        window.addEventListener('resize', handleScroll);
-        document.addEventListener('DOMContentLoaded', handleScroll);
-    </script>
 
 </body>
 </html>
