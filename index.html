@@ -173,6 +173,8 @@
                 width: 98%;
                 max-width: 100vw;
             }
+
+            
             .personalInfo .contactInfo {
                 grid-template-columns: 1fr;
                 padding: 6vw 2vw;
@@ -303,18 +305,24 @@
                 margin-left: auto;
                 margin-right: auto;
             }
-            @media (max-width: 800px) {
-            #personalInfo,
-            #contactInfo,
-            #educationInfo {
-                display: none;
+
+            @media (max-width: 800px){
+                .personalInfo {
+                margin-top: 60vh; /* Push it further down */
+            }
+            .mainText {
+                padding-top: 20vh;
+                padding-bottom: 20vh;
+            }
+            h1 {
+                font-size: 38px;
+            }
+            p {
+                font-size: 18px;
             }
 
-            #personalInfo.show {
-                display: grid;
             }
-        }
-
+            
             
 
      
@@ -323,14 +331,6 @@
 
 </head>
 <body>
-    <script>
-    document.querySelector('.moreInfo a').addEventListener('click', function (e) {
-        e.preventDefault(); // Stop the default jump
-        const personalInfo = document.getElementById('personalInfo');
-        personalInfo.classList.add('show');
-        personalInfo.scrollIntoView({ behavior: 'smooth' });
-    });
-</script>
     <video autoplay muted loop playsinline id="bgVideo" poster="staticBG.png">
         <source src="ownBg.mp4" type="video/mp4">
         Your browser does not support the video tag.
