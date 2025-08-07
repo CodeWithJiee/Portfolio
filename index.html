@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-    <meta name="google-site-verification" content="qcvjVxcbo04jaItllwpLqQ8ZB-vWS2BaLPXTtZ53TGY" />
-   
     <title>My Profile</title>
 
     <style>
@@ -167,6 +165,8 @@
 
         }
 
+
+
         /* Responsive: Stack columns and scale on small screens */
         @media (max-width: 800px) {
             .mainContent {
@@ -296,8 +296,6 @@
                 text-align: center;
             }
 
- 
-
             .mainContent,
             .personalInfo,
             .contactInfo,
@@ -305,6 +303,18 @@
                 margin-left: auto;
                 margin-right: auto;
             }
+            @media (max-width: 800px) {
+            #personalInfo,
+            #contactInfo,
+            #educationInfo {
+                display: none;
+            }
+
+            #personalInfo.show {
+                display: grid;
+            }
+        }
+
             
 
      
@@ -313,6 +323,14 @@
 
 </head>
 <body>
+    <script>
+    document.querySelector('.moreInfo a').addEventListener('click', function (e) {
+        e.preventDefault(); // Stop the default jump
+        const personalInfo = document.getElementById('personalInfo');
+        personalInfo.classList.add('show');
+        personalInfo.scrollIntoView({ behavior: 'smooth' });
+    });
+</script>
     <video autoplay muted loop playsinline id="bgVideo" poster="staticBG.png">
         <source src="ownBg.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -390,5 +408,3 @@
 
 </body>
 </html>
-
-
