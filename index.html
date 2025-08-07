@@ -11,8 +11,7 @@
             margin: 0;
             padding: 0;
             position: relative;
-            margin-top: 150px;
-            padding-top: 60px;
+            
         }
          html {
         scroll-behavior: smooth;
@@ -70,6 +69,10 @@
             max-width: 1000px;
             text-align: center;
             margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 100vh;
          }
          .mainText{         
              font-family: "Orbitron", serif;
@@ -173,8 +176,6 @@
                 width: 98%;
                 max-width: 100vw;
             }
-
-            
             .personalInfo .contactInfo {
                 grid-template-columns: 1fr;
                 padding: 6vw 2vw;
@@ -305,54 +306,16 @@
                 margin-left: auto;
                 margin-right: auto;
             }
-
-            @media (max-width: 800px){
-                .personalInfo {
-                margin-top: 60vh; /* Push it further down */
-            }
-            .mainText {
-                padding-top: 20vh;
-                padding-bottom: 20vh;
-            }
-            h1 {
-                font-size: 38px;
-            }
-            p {
-                font-size: 18px;
+            @media (max-width: 768px) {
+            .mainContent {
+                padding-top: 100px;
+                min-height: 100vh;
             }
 
+            .personalInfo {
+                margin-top: 100vh; 
             }
-            @media (max-width: 800px) {
-                .mainContent {
-                    min-height: 100vh; /* Makes it fill the screen */
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center; /* Vertically center content */
-                    padding: 0 5vw;
-                }
-
-                .personalInfo {
-                    margin-top: 100vh; /* Pushes it one full screen down */
-                }
-
-                .mainText h1 {
-                    font-size: 2.5em;
-                }
-
-                .mainText p {
-                    font-size: 1.2em;
-                }
-
-                nav {
-                    position: fixed;
-                    top: 0;
-                    width: 100%;
-                    background-color: #0a0a0a;
-                    z-index: 1000;
-                }
-                }
-
-            
+            }
             
 
      
