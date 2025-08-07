@@ -143,6 +143,10 @@
             padding: 5vw 4vw;
             box-shadow: 0 4px 32px rgba(0,0,0,0.2);
         }
+        .personalInfo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+            }
         .personalInfo img {
             width: 100%;
             max-width: 300px;
@@ -167,6 +171,7 @@
             margin-bottom: 20px;
 
         }
+        
 
 
 
@@ -212,6 +217,10 @@
                 border-radius: 20px;
                 padding: 5vw 4vw;
                 box-shadow: 0 4px 32px rgba(0,0,0,0.2);
+            }
+            .contactInfo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
             }
             .contactInfo video {
                 width: 100%;
@@ -276,6 +285,10 @@
                 padding: 5vw 4vw;
                 box-shadow: 0 4px 32px rgba(0,0,0,0.2);
             }
+            .educationInfo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+            }
             .educationCard {
                 display: flex;
                 flex-direction: column;
@@ -316,9 +329,71 @@
                 margin-top: 60vh; 
             }
             }
-            
+            .projectsSection {
+            background-color: #0f0f0f;
+            color: #fff;
+            padding: 80px 20px;
+            text-align: center;
+            }
 
-     
+            .projectsSection h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            font-family: 'Orbitron', sans-serif;
+            }
+
+            .projectsContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            }
+
+            .projectCard {
+            background-color: #1a1a1a;
+            border: 1px solid #444;
+            padding: 20px;
+            width: 300px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .projectCard:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+            }
+
+            .projectCard h3 {
+            font-family: 'Silkscreen', sans-serif;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            }
+
+            .projectCard p {
+            font-size: 1em;
+            line-height: 1.4;
+            }
+
+            /* ✅ Responsive Mobile Fix */
+            @media (max-width: 768px) {
+            .projectsContainer {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .projectCard {
+                width: 90%;
+                max-width: 400px;
+            }
+
+            .projectsSection h2 {
+                font-size: 2em;
+            }
+
+            .projectCard p {
+                font-size: 0.95em;
+            }
+            }
     </style>
 
 
@@ -333,6 +408,7 @@
         <li><a href="#">Home</a></li>
         <li><a href="#personalInfo">About</a></li>
         <li><a href="#contactInfo">Contact</a></li>
+        <li><a href="#projects">Projects</a></li>
 
     </ul>
 </nav>
@@ -354,7 +430,7 @@
      </div>
 
      <div id="personalInfo" class="personalInfo">
-        <img src="portraitBg.png" alt="image">
+        <img src="portraitBg.png" alt="Kenjie De Guzman's portrait">
         <div class="infoDetails">
             <h1>PERSONAL INFORMATION</h1>
             <h2>Name: Kenjie De Guzman</h2>
@@ -399,7 +475,26 @@
       </div>
     </div>
 
+   <div class="projectsSection" id="projects">
+  <h2>My Projects</h2>
+  <div class="projectsContainer">
+    <div class="projectCard">
+      <h3>WeCare</h3>
+      <p>A mobile healthcare assistant application with AI-driven diagnostics, medicine reminders, chat with doctors, online consultations, and more.</p>
+    </div>
+    <div class="projectCard">
+      <h3>WAYOLA Craft</h3>
+      <p>An all-in-one academic productivity tool designed for students and teachers, offering document editing, schedule management, and collaborative features.</p>
+    </div>
+    <div class="projectCard">
+      <h3>CampusCanteen</h3>
+      <p>A university canteen ordering and table reservation system with peer-to-peer delivery features for students during free periods.</p>
+    </div>
+  </div>
+</div>
+
+
+
 </body>
 </html>
-
 
