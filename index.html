@@ -322,6 +322,36 @@
             }
 
             }
+            @media (max-width: 800px) {
+                .mainContent {
+                    min-height: 100vh; /* Makes it fill the screen */
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center; /* Vertically center content */
+                    padding: 0 5vw;
+                }
+
+                .personalInfo {
+                    margin-top: 100vh; /* Pushes it one full screen down */
+                }
+
+                .mainText h1 {
+                    font-size: 2.5em;
+                }
+
+                .mainText p {
+                    font-size: 1.2em;
+                }
+
+                nav {
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+                    background-color: #0a0a0a;
+                    z-index: 1000;
+                }
+                }
+
             
             
 
